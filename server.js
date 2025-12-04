@@ -1,3 +1,13 @@
+const mongoose = require('mongoose');
+
+const mongoURI = "mongodb+srv://asahal7:MyMongo123!@cluster0.wd3fl4e.mongodb.net/?appName=Cluster0";
+
+
+mongoose.connect(mongoURI)
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.log("MongoDB connection error:", err));
+
+
 const express = require('express');
 const app = express();
 const PORT = 3000;
